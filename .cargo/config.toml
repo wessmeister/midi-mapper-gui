@@ -1,0 +1,9 @@
+[build]
+jobs = 16                      # Use all 16 CPU cores
+
+[registries.crates-io]
+protocol = "sparse"           # Faster dependency resolution
+
+[net]
+git-fetch-with-cli = false   # Use libgit2 for faster git operations
+retry = 2                     # Reduce retry attempts for faster failures

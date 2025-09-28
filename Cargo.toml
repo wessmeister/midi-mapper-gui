@@ -1,0 +1,17 @@
+[package]
+name = "midi-mapper-linux"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alsa = "0.9"
+gtk4 = "0.9"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dirs = "5.0"
+ctrlc = "3.4"
+
+[profile.release]
+opt-level = 2
+strip = true
+panic = "abort"
